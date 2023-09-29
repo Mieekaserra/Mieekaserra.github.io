@@ -7,3 +7,26 @@ url: https://Mieekaserra.github.io
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+plugins:
+  - jekyll-airtable
+  - environment_variables_generator
+
+airtable:
+  enable_sync: true
+  base_uid: 'appAXs1l7umDoEjXH'
+  tables:
+    - name: 'All Issues' 
+      long_text_columns:
+        - 'column name'
+
+collections_dir: collections
+collections:
+  All Issues:
+    output: true
+
+defaults:
+  - scope:
+      type: "whitepapers"
+    values:
+      layout: "page" # any jekyll layout file you already have in the _layouts that you want to use for this collection type.
