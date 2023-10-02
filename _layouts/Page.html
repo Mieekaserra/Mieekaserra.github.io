@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+
+<div id="main" role="main">     
+  <div class="wrap">
+    {% if page.image.feature %}
+    <div class="page-feature">
+      <div class="page-image">
+        <img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.name }}">
+        {% if page.image.credit %}{% include image-credit.html %}{% endif %}
+      </div><!-- /.page-image -->
+    </div><!-- /.page-feature -->
+    {% endif %}
+    <div class="page-title text-centered">
+      <h1>{{ page.name }}</h1>
+      <img src="{{ page.image_url }}" alt="teaser" itemprop="image" class="img-responsive">
+    </div>
+    <div class="archive-wrap">
+      <div class="container-fluid">
+        <div class="row">
+
+          {% if page.excerpt %}
+            <h2>{{ page.excerpt }}</h2>
+          {% endif %}
+          <h4>{{ page.whitepaper_url }}</h4>
+
+          <p>{{ page.description }}</p>
+
+        </div>
+      </div><!-- /.page-content -->
+    </div class="archive-wrap"><!-- /.archive-wrap -->
+  </div><!-- /.wrap -->
+</div><!-- /#main -->

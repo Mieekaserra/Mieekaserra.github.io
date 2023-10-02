@@ -27,6 +27,6 @@ collections:
 
 defaults:
   - scope:
-      type: "whitepapers"
+      type: "All Issues"
     values:
       layout: "page" # any jekyll layout file you already have in the _layouts that you want to use for this collection type.
